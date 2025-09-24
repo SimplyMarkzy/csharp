@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 
 namespace MyApp
@@ -78,7 +79,7 @@ namespace MyApp
             {
                 Console.WriteLine("narodil si sa pred rokom 2000");
             }
-            */
+            
             Console.WriteLine("zadaj znamku z angliny");
             string za = Console.ReadLine();
             int zang = int.Parse(za);
@@ -95,14 +96,40 @@ namespace MyApp
             {
                 Console.WriteLine("nikam nejdes");
             }
+            */
+            Console.WriteLine("zadaj prve cislo");
+            string prve  = Console.ReadLine();
+            Double prvee = Double.Parse(prve);
 
-            
+            Console.WriteLine("zadaj znak");
+            string znak = Console.ReadLine();
+
+            Console.WriteLine("zadaj druhe cislo");
+            string druhe = Console.ReadLine();
+            Double druhee = Double.Parse(druhe);
+
+            if (znak == "+")
+            {
+                Console.WriteLine(prvee + druhee);
+            }
+            else if (znak == "-")
+            {
+                Console.WriteLine(prvee - druhee);
+            }
+            else if (znak == "*")
+            {
+                Console.WriteLine(prvee * druhee);
+            }
+            else if (znak == "/")
+            {
+                Console.WriteLine(prvee / druhee);
+            }
 
 
 
 
 
         }
-}
+    }
 }
 

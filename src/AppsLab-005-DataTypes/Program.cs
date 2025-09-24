@@ -16,19 +16,19 @@ namespace MyApp
              float pi = 3.14f;
              Console.WriteLine(pi);
              */
-            string name = "Markzy";
-             /*Console.WriteLine(name);
-             char gender = 'P';
-             Console.WriteLine(gender);
-            */
-            int a = 10;
+            // string name = "Markzy";
+            /*Console.WriteLine(name);
+            char gender = 'P';
+            Console.WriteLine(gender);
+           */
+            /*int a = 10;
             int b = 5;
             int sum = a + b;
             Console.WriteLine(sum);
             int sum1 = a - b;
             Console.WriteLine(sum1);
-            //these are for mathematics operations like +-*/
-            float d = 150;
+            these are for mathematics operations like +-*/
+            /*float d = 150;
             float f = 20;
             float sum3 = d/f;
             Console.WriteLine(sum3);
@@ -52,13 +52,57 @@ namespace MyApp
             Console.WriteLine(result);
             // exclemation mark equals nerovna sa           
             bool result1 = 6 !< 3;
-            Console.WriteLine(result1);
+            Console.WriteLine(result1); */
+
+            /* Console.WriteLine("Zadaj meno");
+            string meno = Console.ReadLine();
+            
+            Console.WriteLine("zadaj vek");
+            string vek = Console.ReadLine();
+            
+            int vektvoj = int.Parse(vek);
+            int rok = 2025;
+            int tvojvek = (rok - vektvoj);
+            
+            Console.WriteLine("Ahoj " + meno + " narodil si sa v roku " + tvojvek);
+            
+            if (tvojvek > 2000)
+            {
+                Console.WriteLine("narodil si sa po roku 2000");
+            }
+            else if (tvojvek == 2000) 
+            {
+                Console.WriteLine("narodil si sa v roku 2000");
+            }
+            else
+            {
+                Console.WriteLine("narodil si sa pred rokom 2000");
+            }
+            */
+            Console.WriteLine("zadaj znamku z angliny");
+            string za = Console.ReadLine();
+            int zang = int.Parse(za);
+
+            Console.WriteLine("zadaj znamku z matiky");
+            string zm = Console.ReadLine();
+            int zmat = int.Parse(zm);
+
+            if (zmat <= 3 && zang <= 3)
+            {
+                Console.WriteLine("mozes ist");
+            }
+            else
+            {
+                Console.WriteLine("nikam nejdes");
+            }
+
+            
 
 
 
 
 
         }
-    }
+}
 }
 

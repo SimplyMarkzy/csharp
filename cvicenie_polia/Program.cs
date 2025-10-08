@@ -25,7 +25,6 @@ namespace cvicenie_polia
                 sum += item;
             }
              Console.WriteLine(sum);
-            */
             //cez jeden cyklus naplnit pole hodnotami pomocou write line a nasledne sctitat vsetky hodnoty #
 
             
@@ -52,6 +51,24 @@ namespace cvicenie_polia
                 if (input == "exit")
                 break;
             }
+          
+            int[] number = new int[10];
+            for (int i = 0; i < number.Length; i++)
+            {
+                number[i] = i * 10;
+            }
+            int[] number2 = new int[11];
+            for (int i = 0;i < number.Length;i++)
+            {
+                number2[i] = number[i];
+            }
+            number2[10] = 10000;
+            foreach (int i in number2)
+            {
+                Console.WriteLine(i);
+            }
+            */
+
 
 
 

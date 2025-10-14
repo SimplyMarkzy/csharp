@@ -9,9 +9,12 @@ namespace list_queue
         static void Main(string[] args)
         {
             List<int> list = new List<int>();
-            string command = Console.ReadLine();
+            
             while (true)
             {
+                string command = Console.ReadLine();
+                if (command == "end")
+                break;
                 switch (command)
                 {
                     case "add":

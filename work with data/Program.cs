@@ -14,8 +14,8 @@ namespace work_with_data
             //MoneyCountAverage(text);
             //AllSocialSecurityNumbers(text);
             //NameWithLeastMoney(text);
-            AllPeopleWithLessThenHalfMilion(text);
-            foreach (var item in mena)
+            var people = AllPeopleWithLessThenHalfMilion(text);
+            foreach (var item in people)
             {
                 Console.WriteLine(item);
             }
@@ -58,19 +58,20 @@ namespace work_with_data
             }
             Console.WriteLine(name);
         }
-       public static void AllPeopleWithLessThenHalfMilion(string[] text)
+        public static List<string> AllPeopleWithLessThenHalfMilion(string[] text)
         {
-            List<int> mena = new List<int>();
+            List<string> mena = new List<string>();
             foreach (string line in text.Skip(1))
             {
                 string[] splits = line.Split(';');
                 int value = int.Parse(splits[4]);
                 if (value < 500000)
                 {
-                    mena.Add(value);    
+                    mena.Add(splits[0] + " " + splits[1]);    
                 }
                 
             }
+            return mena;
 
 
 
@@ -79,7 +80,6 @@ namespace work_with_data
 
 
 
-
-    }
+        }
     }
 }

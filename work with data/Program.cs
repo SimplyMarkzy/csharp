@@ -1,4 +1,5 @@
-﻿using System.Reflection.Metadata;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -10,9 +11,14 @@ namespace work_with_data
         {
             // we are gonna work with data in this file :)
             string[] text = File.ReadAllLines("People_100.csv");
-            MoneyCountAverage(text);
-            AllSocialSecurityNumbers(text);
-            NameWithLeastMoney(text);
+            //MoneyCountAverage(text);
+            //AllSocialSecurityNumbers(text);
+            //NameWithLeastMoney(text);
+            AllPeopleWithLessThenHalfMilion(text);
+            foreach (var item in mena)
+            {
+                Console.WriteLine(item);
+            }
         }
         public static void MoneyCountAverage(string[] text)
         {
@@ -52,6 +58,19 @@ namespace work_with_data
             }
             Console.WriteLine(name);
         }
+       public static void AllPeopleWithLessThenHalfMilion(string[] text)
+        {
+            List<int> mena = new List<int>();
+            foreach (string line in text.Skip(1))
+            {
+                string[] splits = line.Split(';');
+                int value = int.Parse(splits[4]);
+                if (value < 500000)
+                {
+                    mena.Add(value);    
+                }
+                
+            }
 
 
 
@@ -61,6 +80,6 @@ namespace work_with_data
 
 
 
-
+    }
     }
 }

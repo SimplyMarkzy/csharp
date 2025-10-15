@@ -67,7 +67,7 @@ namespace work_with_data
                 int value = int.Parse(splits[4]);
                 if (value < 500000)
                 {
-                    mena.Add(splits[0] + " " + splits[1]);    
+                    mena.Add(splits[0] + " " + splits[1] + " " + value);    
                 }
                 
             }

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
+using System.Security.Cryptography.X509Certificates;
 
 namespace list_queue
 {
@@ -8,8 +9,9 @@ namespace list_queue
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>();
             
+            
+            bool running = true;
             while (true)
             {
                 string command = Console.ReadLine();
@@ -19,10 +21,7 @@ namespace list_queue
                 {
                     case "add":
                         {
-                            Console.WriteLine("What number do you want to add");
-                            string number = Console.ReadLine();
-                            int numberint = int.Parse(number);
-                            list.Add(numberint);
+                            AddNumberToList(list);
                             break;
                         }
                     case "del":
@@ -162,6 +161,13 @@ namespace list_queue
 
                 }
             }
+        }
+        public static void AddNumberToList(List<int> list, int number)
+        {
+            Console.WriteLine("What number do you want to add");
+            string numbers = Console.ReadLine();
+            int numberint = int.Parse(numbers);
+            list.Add(numberint);
         }
     }     
 }

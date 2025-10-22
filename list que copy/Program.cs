@@ -63,16 +63,7 @@
                         }
                     case "help":
                         {
-                            Console.WriteLine("type ´add´ to add a number into the list");
-                            Console.WriteLine("type ´del´ to remove the number from the list");
-                            Console.WriteLine("type ´deli´ to remove the a number from the chosen position");
-                            Console.WriteLine("type ´has´ to check if the chosen number is in the list");
-                            Console.WriteLine("type ´list´ to open the list");
-                            Console.WriteLine("type ´end´ to exit the console");
-                            Console.WriteLine("type ´avg´ to calculate the average number on list");
-                            Console.WriteLine("type ´min´ to get the biggest number on list");
-                            Console.WriteLine("type ´max´ to get the smallest number on list");
-                            Console.WriteLine("type ´get´ to find the number on chosen position");
+                            HelpCommand(list);
                             break;
                         }
                     case "get":
@@ -197,6 +188,19 @@
             {
                 Console.WriteLine("this position is not in the list");
             }
+        }
+        public static void HelpCommand(List<int> list)
+        {
+            Console.WriteLine("type ´add´ to add a number into the list");
+            Console.WriteLine("type ´del´ to remove the number from the list");
+            Console.WriteLine("type ´deli´ to remove the a number from the chosen position");
+            Console.WriteLine("type ´has´ to check if the chosen number is in the list");
+            Console.WriteLine("type ´list´ to open the list");
+            Console.WriteLine("type ´end´ to exit the console");
+            Console.WriteLine("type ´avg´ to calculate the average number on list");
+            Console.WriteLine("type ´min´ to get the biggest number on list");
+            Console.WriteLine("type ´max´ to get the smallest number on list");
+            Console.WriteLine("type ´get´ to find the number on chosen position");
         }
     }
     }

@@ -20,6 +20,7 @@ namespace game
         }
         public void EnemyAttack(hero myHero)
         {
+            DMG = DMG - myHero.Armor;
             myHero.HP = myHero.HP - DMG;
         }
     }

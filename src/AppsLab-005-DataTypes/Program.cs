@@ -99,7 +99,7 @@ namespace MyApp
             */
             Console.WriteLine("zadaj prve cislo");
             string prve  = Console.ReadLine();
-            Double prvee = Double.Parse(prve);
+            double prvee = double.Parse(prve);
 
             Console.WriteLine("zadaj znak");
             string znak = Console.ReadLine();

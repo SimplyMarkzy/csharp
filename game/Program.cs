@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            hero myHero = new hero();
+            hero myHero = new hero("pepan",10,1,10,10000);
             enemies enemy1 = new enemies("Goblin", 20, 5);
             Console.WriteLine("Welcome to tihs totally legit battlesim (no joke)");
             while (true)

@@ -5,7 +5,12 @@ namespace work_with_strings_and_math
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {             
+            
+        
+            
+            
+            
             int a = int.Parse(Console.ReadLine());
             int b = int.Parse(Console.ReadLine());
             int result = Add(a, b ,5, 10, 15);

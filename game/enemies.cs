@@ -22,11 +22,11 @@ namespace game
         public void EnemyAttack(hero myHero)
         {
             // 1 armor = 0.01% = 0.0001 dmg reduction
-            double reduce = myHero.Armor * 0.0001;
+            double reduce = myHero.Armor / (myHero.Armor + 1000);
 
             // Cap between 0 and 90%
             if (reduce < 0) reduce = 0;
-            if (reduce > 0.90) reduce = 0.90;
+            
 
             double finalDamage = DMG * (1 - reduce);
             finalDamage = Math.Max(0, finalDamage);

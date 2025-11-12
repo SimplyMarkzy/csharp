@@ -13,22 +13,20 @@ namespace game
     {
         int energyget = 5;
 
-        public string Name { get; set; }
-        public double HP { get; set; }
-        public double DMG { get; set; }
-        public double Energy { get; set; }
-        public double Armor { get; set; }
+        public string Name { get; set; } 
+        public double HP { get; set; } = 0;
+        public double Strenght { get; set; } = 0;
+        public double Energy { get; set; } = 0;
+        public double Armor { get; set; } = 0;
+        public double Mana { get; set; } = 0;
 
-        public hero(string name, double hp, double dmg, double energy, double armor)
+        public hero(string HeroName)
         {
-            Name = name;
-            HP = hp;
-            DMG = dmg;
-            Energy = energy;
-            Armor = armor;
+            Name = HeroName;
         }
+           
 
-        public void HeroAttack(enemies enemy1)
+       /* public void HeroAttack(enemies enemy1)
         {
             if (Energy >= 2)
             {
@@ -38,8 +36,11 @@ namespace game
             else
             {
                 Energy += energyget; // resting to get energy back
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.WriteLine("Resting to regain energy!");
+                Console.ResetColor();
             }
-        }
+        }*/
     }
 }
 
